@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import LeadCaptureDialog from "./LeadCaptureDialog";
 
 const CTASection = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   return (
     <section className="py-24 lg:py-32 relative overflow-hidden">
       {/* Background Effects */}
@@ -28,7 +32,12 @@ const CTASection = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="xl" className="w-full sm:w-auto">
+            <Button 
+              variant="hero" 
+              size="xl" 
+              className="w-full sm:w-auto"
+              onClick={() => setIsDialogOpen(true)}
+            >
               Quero Entrar Agora
               <ArrowRight className="w-5 h-5" />
             </Button>
@@ -54,6 +63,9 @@ const CTASection = () => {
           </div>
         </div>
       </div>
+
+      {/* Lead Capture Dialog */}
+      <LeadCaptureDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </section>
   );
 };
