@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, TrendingUp, Handshake, Target } from 'lucide-react';
+import { Users, TrendingUp, Users2, Target } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -55,7 +55,7 @@ const About: React.FC = () => {
                     <p className="text-gray-400 text-sm">Conexões curadas para garantir relevância e qualidade.</p>
                 </div>
                 <div className="bg-black/40 p-6 rounded-2xl border border-white/5 hover:border-brand-yellow/50 transition-colors">
-                    <Handshake className="text-brand-accent-green mb-4" size={32} />
+                    <Users2 className="text-brand-accent-green mb-4" size={32} />
                     <h3 className="text-white font-semibold text-xl mb-2">Parcerias Reais</h3>
                     <p className="text-gray-400 text-sm">Ambiente propício para fechar contratos e sociedades.</p>
                 </div>
